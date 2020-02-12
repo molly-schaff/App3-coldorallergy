@@ -96,7 +96,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
 <div class="page" id="one"> <!-- this identifies page one with question one -->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- this creates the header -->
 		<h1>Question 1</h1> <!-- this labels question one -->
 	</div>
 	
@@ -136,8 +136,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Question 4</h1> <!-- this labels question four -->
 	</div>
 	
-	<div id="content" class="w3-container"> <!-- this is the fourth question -->
-		<p>Are your symptoms seasonal or chronic?</p>
+	<div id="content" class="w3-container"> 
+		<p>Are your symptoms seasonal or chronic?</p> <!-- this is the fourth question -->
 		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> YES </a> <!-- this is the yes button that adds to the allergy count and proceeds to page five -->
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> NO </a> <!-- this is the no button that adds to the cold count and proceeds to page five -->
 	</div>
@@ -148,8 +148,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Question 5</h1> <!-- this labels question five -->
 	</div>
 	
-	<div id="content" class="w3-container"> <!-- this is the fifth question -->
-		<p>Do you have aches and joint pains?</p>
+	<div id="content" class="w3-container"> 
+		<p>Do you have aches and joint pains?</p> <!-- this is the fifth question -->
 		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> YES </a> <!-- this is the yes button that adds to the cold count and proceeds to page six -->
 		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a> <!-- this is the no button that adds to the allergy count and proceeds to page six -->
 	</div>
