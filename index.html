@@ -16,10 +16,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of this code is the differentiate between symptoms of a cold and allergies and determine the probability of the quiz taker of having one or the other.
  
 Known Issues:
-blah, blah, blah, blah
+I had isses creating buttons because I would forget the # sign before the page I wanted to direct to, which caused a 404 message multiple times. I had issues programming the results function and getting the results to appear on the page.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -35,24 +35,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var allergy_count = 0; // this variable counts the number of times the sign for an allgery is selected
+        var cold_count = 0; // this variable counts the number of times the sign for an cold is selected
 	
-	function resultsPercent(){
-	var allergyPercent = (allergy_count/6)*100
-	var coldPercent = (cold_count/6)*100
-	var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+	function resultsPercent(){ // this links the function to the results page
+	var allergyPercent = (allergy_count/6)*100 // this variable calculates the allergy percentage
+	var coldPercent = (cold_count/6)*100 // this variable calculates the cold percentage
+	var resultText = document.getElementById("results"); // this links the element to the results page
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; // this allows the probiblity to show up on the last page
 	
 	}
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
+        function allergyAdd(){ // this allows me to link the answer choices to the allergy count
+            allergy_count = allergy_count + 1; // this increases the allergy count by one
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function coldAdd(){ // this allows me to link the answer choices to the cold count
+            cold_count = cold_count + 1; // this increases the cold count by one
         }
 
   </script>
@@ -82,106 +82,106 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+<div id="header" class="w3-container w3-flat-carrot"> <!-- this creates the header and makes it the same theme as the rest of the app -->
+	<h1>Cold or Allergies?</h1> <!-- this labels the home page -->
 </div>
 	
-<div id="content" class="w3-container">
+<div id="content" class="w3-container"> <!-- this creates the section for the question -->
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- this button takes you to the first question of the quiz -->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
+<div class="page" id="one"> <!-- this identifies page one with question one -->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+		<h1>Question 1</h1> <!-- this labels question one -->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>    
-	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> YES </a>
-	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> NO </a>
+        <p>Are your eyes watery or itchy?</p> <!-- this is the first question -->
+	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> YES </a> <!-- this is the yes button that adds to the allergy count and proceeds to page two -->
+	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> NO </a> <!-- this is the no button that adds to the cold count and proceeds to page two -->
 	</div>
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"> <!-- this identifies page two with question two -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+		<h1>Question 2</h1> <!-- this labels question two -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
-		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> YES </a>
-		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a>
+		<p>Do you have a fever?</p> <!-- this is the second question -->
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> YES </a> <!-- this is the yes button that adds to the cold count and proceeds to page three -->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a> <!-- this is the no button that adds to the allergy count and proceeds to page three -->
 	</div>
 </div>	
 	
-<div class="page" id="three">
+<div class="page" id="three"> <!-- this identifies page three with question three -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
+		<h1>Question 3</h1> <!-- this labels question three -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>
-		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> YES </a>
-		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a>
+		<p>Do you have a sore throat?</p> <!-- this is the third question -->
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> YES </a> <!-- this is the yes button that adds to the cold count and proceeds to page four -->
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a> <!-- this is the no button that adds to the allergy count and proceeds to page four -->
 	</div>
 </div>
 
-<div class="page" id="four">
+<div class="page" id="four"> <!-- this identifies page four with question four -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
+		<h1>Question 4</h1> <!-- this labels question four -->
 	</div>
 	
-	<div id="content" class="w3-container">
+	<div id="content" class="w3-container"> <!-- this is the fourth question -->
 		<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> YES </a>
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> NO </a>
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> YES </a> <!-- this is the yes button that adds to the allergy count and proceeds to page five -->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> NO </a> <!-- this is the no button that adds to the cold count and proceeds to page five -->
 	</div>
 </div>	
 
-<div class="page" id="five">
+<div class="page" id="five"> <!-- this identifies page five with question five -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1>
+		<h1>Question 5</h1> <!-- this labels question five -->
 	</div>
 	
-	<div id="content" class="w3-container">
+	<div id="content" class="w3-container"> <!-- this is the fifth question -->
 		<p>Do you have aches and joint pains?</p>
-		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> YES </a>
-		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a>
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> YES </a> <!-- this is the yes button that adds to the cold count and proceeds to page six -->
+		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a> <!-- this is the no button that adds to the allergy count and proceeds to page six -->
 	</div>
 </div>
 
-<div class="page" id="six">
+<div class="page" id="six"> <!-- this identifies page six with question six -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1>
+		<h1>Question 6</h1> <!-- this labels question six -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is your mucus clear?</p>
-		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black"> YES </a>
-		<a href="#results" onclick="coldAdd();" class="w3-btn w3-black"> NO </a>
+		<p>Is your mucus clear?</p> <!-- this is the sixth question -->
+		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black"> YES </a> <!-- this is the yes button that adds to the allergy count and proceeds to the results page -->
+		<a href="#results" onclick="coldAdd();" class="w3-btn w3-black"> NO </a> <!-- this is the no button that adds to the cold count and proceeds to the results page -->
 	</div>
 </div>
 
-<div class="page" id="results">
+<div class="page" id="results"> <!-- this identifies the results page with the results button -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
+		<h1>Results</h1> <!-- this labels the results -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		
-		<a onclick="resultsPercent();" class="w3-btn w3-round w3-gray"> Get Results </a>
-	<p id="results"></p>
+		<p>Click the button below to get your results!</p>
+		<a onclick="resultsPercent();" class="w3-btn w3-round w3-gray"> Get Results </a> <!-- this button take you to the results page and calculates the percentage of cold and allergy chances based off the function in JavaScript and the answers given by the users -->
+	<p id="results"></p> <!-- this identifies the page that the function comes to -->
 		
 	</div>
 </div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<p>DIY!</p> <!-- this labels the footer -->
 </footer>
 
 </body>
